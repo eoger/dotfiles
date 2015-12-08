@@ -1,0 +1,1 @@
+mk_add_options MOZ_OBJDIR="/home/eoger/mozilla/obj-@CONFIG_GUESS@"

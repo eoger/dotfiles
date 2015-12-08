@@ -1,0 +1,1 @@
+mk_add_options MOZ_OBJDIR="C:\\mozilla\firefox\obj-@CONFIG_GUESS@"

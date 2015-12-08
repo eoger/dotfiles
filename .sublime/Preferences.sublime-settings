@@ -1,0 +1,79 @@
+{
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"bundle.js"
+	],
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules",
+		"bower_components",
+		"gecko-dev/js/src/*test*",
+		"gecko-dev/addon-sdk",
+		"gecko-dev/build/stlport",
+		"gecko-dev/db/sqlite3/src",
+		"gecko-dev/gfx/angle",
+		"gecko-dev/gfx/cairo",
+		"gecko-dev/gfx/graphite2",
+		"gecko-dev/gfx/harfbuzz",
+		"gecko-dev/gfx/ots",
+		"gecko-dev/gfx/qcms",
+		"gecko-dev/gfx/skia",
+		"gecko-dev/intl/icu",
+		"gecko-dev/ipc/chromium",
+		"gecko-dev/js/src/octane",
+		"gecko-dev/media/kiss_ftt",
+		"gecko-dev/media/lib*",
+		"gecko-dev/media/webrtc/trunk",
+		"gecko-dev/modules/freetype2",
+		"gecko-dev/modules/libbz2",
+		"gecko-dev/modules/libmar",
+		"gecko-dev/modules/zlib",
+		"gecko-dev/obj-*",
+		"gecko-dev/other-licenses",
+		"gecko-dev/python",
+		"gecko-dev/security/sandbox/chromium",
+		"gecko-dev/testing"
+	],
+	"font_face": "Inconsolata",
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"shift_tab_unindent": true,
+	"show_full_path": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "true"
+}

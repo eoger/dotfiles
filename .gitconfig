@@ -1,0 +1,18 @@
+# This is Git's per-user configuration file.
+[core]
+	user = Edouard Oger
+	email = edouard.oger@gmail.com
+	editor = subl -n -w
+[push]
+	default = simple
+[user]
+	name = Edouard Oger
+	email = edouard.oger@gmail.com
+[alias]
+	co = checkout
+	cm = !git add -A && git commit -m
+	amend = !git add -A && git commit --amend --no-edit
+	st = status
+	last = log -1 HEAD
+	unstage = reset HEAD --
+	hgp = !git format-patch -k -p --patience -U8 -1 HEAD --stdout | git-patch-to-hg-patch > $(git symbolic-ref --short HEAD).patch
