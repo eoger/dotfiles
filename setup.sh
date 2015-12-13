@@ -23,8 +23,7 @@ brew install --HEAD mpv
 brew linkapps mpv
 
 # Install applications
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install caffeine # Keep mac awake
 brew cask install flux
