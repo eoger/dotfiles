@@ -96,7 +96,7 @@ nvm install 0.10
 nvm alias default 0.10
 
 # Install npm global packages
-npm install -g npm # Update npm
+npm install -g npm@latest # Update npm
 npm install -g bower
 npm install -g eslint
 npm install -g grunt-cli
