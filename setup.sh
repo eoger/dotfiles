@@ -25,6 +25,7 @@ brew linkapps mpv
 # Install applications
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install caffeine # Keep mac awake
 brew cask install flux
 brew cask install iterm2 # Better terminal
@@ -38,6 +39,7 @@ brew cask install messenger # FB Messenger desktop client
 brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install feeds
+brew cask install firefox-nightly
 brew cask install firefox
 brew cask install google-chrome
 brew cask install steam
@@ -48,7 +50,7 @@ brew cask install google-photos-backup
 brew cask install hubic
 brew cask install sublime-text3
 brew cask install transmission
-brew cask install viscocity
+brew cask install viscosity
 brew cask install vmware-fusion
 # Quicklook plugins
 brew cask install qlcolorcode
@@ -67,27 +69,25 @@ brew update && brew upgrade && brew cleanup && brew cask cleanup
 brew install wget
 brew install zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-echo /usr/local/bin/bash >> /etc/shells
-chsh -s /usr/local/bin/bash
 
 # Copy various configuration files
-cp -r .config .gitconfig .zshenv .zshrc $HOME
+cp -r .config .gitconfig .zshenv .zshrc "$HOME"
 
 # Sublime text
 
 # Add a command-line subl command to open Sublime Text
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl || true
 # Install Package Control + preferences
-SUBLIME_CONFIG=$HOME/Library/"Application Support"/"Sublime Text 3"
-SUBLIME_INSTALLED_PACKAGES=$SUBLIME_CONFIG/"Installed Packages"
-SUBLIME_PREFERENCES=$SUBLIME_CONFIG/Packages/User
-mkdir -p $SUBLIME_INSTALLED_PACKAGES
-mkdir -p $SUBLIME_PREFERENCES
-wget https://sublime.wbond.net/Package%20Control.sublime-package -P $SUBLIME_INSTALLED_PACKAGES
-cp .sublime/* $SUBLIME_PREFERENCES
+SUBLIME_CONFIG="$HOME"/Library/"Application Support"/"Sublime Text 3"
+SUBLIME_INSTALLED_PACKAGES="$SUBLIME_CONFIG"/"Installed Packages"
+SUBLIME_PREFERENCES="$SUBLIME_CONFIG"/Packages/User
+mkdir -p "$SUBLIME_INSTALLED_PACKAGES"
+mkdir -p "$SUBLIME_PREFERENCES"
+wget https://sublime.wbond.net/Package%20Control.sublime-package -P "$SUBLIME_INSTALLED_PACKAGES"
+cp .sublime/* "$SUBLIME_PREFERENCES"
 
 # Install moz-git-tools
-git clone https://github.com/mozilla/moz-git-tools.git $HOME/moz-git-tools
+git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
 
 # Install nvm + npm + Node 0.10 (for FxA)
 brew install nvm
@@ -110,4 +110,4 @@ sudo easy_install pip && sudo pip install virtualenv
 ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > bootstrap.py && python bootstrap.py
 rm -i bootstrap.py
-cp -r gecko-dev $HOME
+cp -r gecko-dev "$HOME"
