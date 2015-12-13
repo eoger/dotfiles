@@ -58,6 +58,7 @@ brew cask install qlstephen
 brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlimagesize
+brew cask install qlvideo
 # Fonts
 brew tap caskroom/fonts
 brew cask install font-inconsolata
