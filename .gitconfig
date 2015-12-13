@@ -1,13 +1,11 @@
 # This is Git's per-user configuration file.
 [core]
-	user = Edouard Oger
-	email = edouard.oger@gmail.com
 	editor = subl -n -w
 [push]
 	default = simple
 [user]
 	name = Edouard Oger
-	email = edouard.oger@gmail.com
+	email = eoger@fastmail.com
 [alias]
 	co = checkout
 	cm = !git add -A && git commit -m
