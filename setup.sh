@@ -108,6 +108,4 @@ sudo easy_install pip && sudo pip install virtualenv
 
 # gecko-dev Stuff
 ccache --max-size 8G
-curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > bootstrap.py && python bootstrap.py
-rm -i bootstrap.py
-cp -r gecko-dev "$HOME"
+curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python bootstrap.py
