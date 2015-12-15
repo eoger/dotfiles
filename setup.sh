@@ -101,6 +101,7 @@ npm install -g bower
 npm install -g eslint
 npm install -g grunt-cli
 npm install -g webpack
+npm install -g git-open
 
 # FxA Dev Dependencies
 brew install gmp redis graphicsmagick
