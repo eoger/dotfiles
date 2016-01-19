@@ -1,0 +1,8 @@
+#verticaltabs-splitter {
+  min-width: 0 !important;
+  background: none !important;
+}
+
+#verticaltabs-box > #TabsToolbar {
+  display: none;
+}
