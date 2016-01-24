@@ -45,7 +45,7 @@ brew cask install steam
 brew cask install go2shell
 brew cask install imageoptim
 brew cask install the-unarchiver
-brew cask install google-photos-backup
+brew cask install google-drive
 brew cask install hubic
 brew cask install sublime-text3
 brew cask install transmission
