@@ -89,11 +89,11 @@ cp .sublime/* "$SUBLIME_PREFERENCES"
 # Install moz-git-tools
 git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
 
-# Install nvm + npm + Node 0.10 (for FxA)
+# Install nvm + npm + Node 4 (for FxA)
 brew install nvm
 source $(brew --prefix nvm)/nvm.sh
-nvm install 0.10
-nvm alias default 0.10
+nvm install 4
+nvm alias default 4
 
 # Install npm global packages
 npm install -g npm@latest # Update npm
