@@ -72,6 +72,7 @@ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - 
 
 # Copy various configuration files
 cp -r .config .gitconfig .zshenv .zshrc "$HOME"
+sudo cp gitconfig /usr/local/etc/ && sudo chown "$USER" /usr/local/etc/gitconfig
 
 # Sublime text
 
