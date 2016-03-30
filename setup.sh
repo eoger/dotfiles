@@ -62,9 +62,6 @@ brew cask install qlvideo
 brew tap caskroom/fonts
 brew cask install font-inconsolata
 
-# Brew all done
-brew update && brew upgrade && brew cleanup && brew cask cleanup
-
 # Install Oh My Zsh
 brew install wget
 brew install zsh
@@ -111,3 +108,6 @@ sudo easy_install pip && sudo pip install virtualenv
 # gecko-dev Stuff
 ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python bootstrap.py
+
+# Cleanup
+brew cleanup -p && brew cask cleanup
