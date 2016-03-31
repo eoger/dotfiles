@@ -16,6 +16,7 @@ brew doctor
 brew install git
 brew install mercurial
 brew install ccache
+brew install terminal-notifier
 brew install python
 # mpv
 brew tap mpv-player/mpv
@@ -45,8 +46,7 @@ brew cask install steam
 brew cask install go2shell
 brew cask install imageoptim
 brew cask install the-unarchiver
-brew cask install google-drive
-brew cask install hubic
+brew cask install dropbox
 brew cask install sublime-text3
 brew cask install transmission
 brew cask install viscosity
@@ -61,6 +61,7 @@ brew cask install qlvideo
 # Fonts
 brew tap caskroom/fonts
 brew cask install font-inconsolata
+brew cask install font-droid-sans-mono
 
 # Install Oh My Zsh
 brew install wget
@@ -88,8 +89,9 @@ cp .sublime/* "$SUBLIME_PREFERENCES"
 git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
 
 # Install nvm + npm + Node 4 (for FxA)
-brew install nvm
-source $(brew --prefix nvm)/nvm.sh
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 nvm install 4
 nvm alias default 4
 
