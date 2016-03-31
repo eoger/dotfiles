@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set -e # Exit on error
 set -o xtrace # Print executed commands
 
@@ -18,6 +20,8 @@ brew install mercurial
 brew install ccache
 brew install terminal-notifier
 brew install python
+brew install wget
+brew install zsh
 # mpv
 brew tap mpv-player/mpv
 brew install --HEAD mpv
@@ -63,16 +67,16 @@ brew tap caskroom/fonts
 brew cask install font-inconsolata
 brew cask install font-droid-sans-mono
 
-# Install Oh My Zsh
-brew install wget
-brew install zsh
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+# Install Prezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+./setup-prezto.sh
+chsh -s /bin/zsh
 
 # Brew command line completion
 ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 
 # Copy various configuration files
-cp -r .config .gitconfig .zshenv .zshrc "$HOME"
+cp -r .config .gitconfig .zshenv .zshrc .zpreztorc "$HOME"
 sudo cp gitconfig /usr/local/etc/ && sudo chown "$USER" /usr/local/etc/gitconfig
 
 # Sublime text
