@@ -68,6 +68,9 @@ brew install wget
 brew install zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 
+# Brew command line completion
+ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
+
 # Copy various configuration files
 cp -r .config .gitconfig .zshenv .zshrc "$HOME"
 sudo cp gitconfig /usr/local/etc/ && sudo chown "$USER" /usr/local/etc/gitconfig
