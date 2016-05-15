@@ -101,17 +101,12 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | b
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 nvm install 5
+npm install -g npm
 nvm install 4
+npm install -g npm
 nvm install 0.10
+npm install -g npm
 nvm unalias default # Super slow zsh startup otherwise :(
-
-# Install npm global packages
-npm install -g npm@latest # Update npm
-npm install -g bower
-npm install -g eslint
-npm install -g grunt-cli
-npm install -g webpack
-npm install -g git-open
 
 # FxA Dev Dependencies
 brew install gmp redis graphicsmagick
