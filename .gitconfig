@@ -14,3 +14,5 @@
 	last = log -1 HEAD
 	unstage = reset HEAD --
 	hgp = !git format-patch -k -p --patience -U8 -1 HEAD --stdout | git-patch-to-hg-patch > $(git symbolic-ref --short HEAD).patch
+[pull]
+	ff = only
