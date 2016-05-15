@@ -95,12 +95,14 @@ cp .sublime/* "$SUBLIME_PREFERENCES"
 # Install moz-git-tools
 git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
 
-# Install nvm + npm + Node 4 (for FxA)
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+# Install nvm + npm + Node
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install 5
 nvm install 4
-nvm alias default 4
+nvm install 0.10
+nvm unalias default # Super slow zsh startup otherwise :(
 
 # Install npm global packages
 npm install -g npm@latest # Update npm
