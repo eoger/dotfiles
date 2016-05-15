@@ -1,0 +1,24 @@
+[core]
+  repositoryformatversion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
+  ignorecase = true
+  precomposeunicode = true
+[fetch]
+  prune = true
+[push]
+  default = upstream
+[remote "central"]
+  url = hg::https://hg.mozilla.org/mozilla-central
+  fetch = +refs/heads/branches/default/tip:refs/remotes/central/default
+[remote "inbound"]
+  url = hg::https://hg.mozilla.org/integration/mozilla-inbound
+  fetch = +refs/heads/branches/default/tip:refs/remotes/inbound/default
+  pushurl = hg::ssh://hg.mozilla.org/integration/mozilla-inbound
+[remote "try"]
+  url = hg::https://hg.mozilla.org/try
+  fetch = +refs/heads/*:refs/remotes/try/*
+  skipDefaultUpdate = true
+  pushurl = hg::ssh://hg.mozilla.org/try
+  push = +HEAD:refs/heads/branches/default/tip

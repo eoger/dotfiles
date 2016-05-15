@@ -121,5 +121,19 @@ sudo pip install mozconfigwrapper
 ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python bootstrap.py
 
+# Install git cinnabar
+git clone https://github.com/glandium/git-cinnabar.git "$HOME"/git-cinnabar
+
+# See https://github.com/glandium/git-cinnabar/wiki/Mozilla:-A-git-workflow-for-Gecko-development
+cp -r gecko "$HOME"
+cd "$HOME"/gecko
+git init
+mv .gitconfig .git/config
+git remote update
+git checkout central/default
+./mach mercurial-setup # We need this at least for the MozReview Git Tools
+git mozreview configure
+cd -
+
 # Cleanup
 brew cleanup -p && brew cask cleanup
