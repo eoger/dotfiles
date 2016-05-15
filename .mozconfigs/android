@@ -1,0 +1,11 @@
+ac_add_options --enable-application=mobile/android
+
+#ac_add_options --target=arm-linux-androideabi
+# x86 version
+ac_add_options --target=i386-linux-android
+
+# With the following Android SDK:
+ac_add_options --with-android-sdk="/Users/eoger/.mozbuild/android-sdk-macosx"
+
+# Enable artifact building:
+ac_add_options --enable-artifact-builds

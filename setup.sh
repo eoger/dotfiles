@@ -76,7 +76,7 @@ chsh -s /bin/zsh
 ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 
 # Copy various configuration files
-cp -r .config .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
+cp -r .config .mozconfigs .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
 sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/local/etc/gitconfig
 
 # Sublime text
@@ -114,7 +114,10 @@ npm install -g git-open
 brew install gmp redis graphicsmagick
 sudo easy_install pip && sudo pip install virtualenv
 
-# gecko-dev Stuff
+# Allows to manage multiple mozconfigs
+sudo pip install mozconfigwrapper
+
+# mozilla-central stuff
 ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python bootstrap.py
 
