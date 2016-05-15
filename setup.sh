@@ -29,6 +29,7 @@ brew linkapps mpv
 
 # Install applications
 brew tap caskroom/cask
+brew tap caskroom/versions
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install caffeine # Keep mac awake
 brew cask install flux
@@ -43,7 +44,7 @@ brew cask install messenger # FB Messenger desktop client
 brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install feeds
-brew cask install firefox-nightly
+brew cask install firefoxnightly
 brew cask install firefox
 brew cask install google-chrome
 brew cask install steam
