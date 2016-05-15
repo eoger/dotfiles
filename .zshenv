@@ -13,3 +13,4 @@ fi
 export PATH=${PATH}:/Users/eoger/git-cinnabar:/Users/eoger/.mozbuild/version-control-tools/git/commands:/Users/eoger/moz-git-tools
 export CCACHE_COMPRESS=""
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export ANDROID_HOME="/Users/eoger/.mozbuild/android-sdk-macosx"
