@@ -93,9 +93,6 @@ mkdir -p "$SUBLIME_PREFERENCES"
 wget https://sublime.wbond.net/Package%20Control.sublime-package -P "$SUBLIME_INSTALLED_PACKAGES"
 cp .sublime/* "$SUBLIME_PREFERENCES"
 
-# Install moz-git-tools
-git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
-
 # Install nvm + npm + Node
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
@@ -115,12 +112,13 @@ sudo easy_install pip && sudo pip install virtualenv
 # Allows to manage multiple mozconfigs
 sudo pip install mozconfigwrapper
 
-# mozilla-central stuff
+# mozilla-central setup
 ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python bootstrap.py
 
-# Install git cinnabar
+# Install git cinnabar and moz-git-tools
 git clone https://github.com/glandium/git-cinnabar.git "$HOME"/git-cinnabar
+git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
 
 # See https://github.com/glandium/git-cinnabar/wiki/Mozilla:-A-git-workflow-for-Gecko-development
 cp -r gecko "$HOME"
