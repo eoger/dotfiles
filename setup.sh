@@ -15,13 +15,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 
 # Install command-line applications
-brew install git
-brew install mercurial
-brew install ccache
-brew install terminal-notifier
-brew install python
-brew install wget
-brew install zsh
+brew install $(< brew-formulae.txt)
 # mpv
 brew tap mpv-player/mpv
 brew install --HEAD mpv
@@ -30,43 +24,9 @@ brew linkapps mpv
 # Install applications
 brew tap caskroom/cask
 brew tap caskroom/versions
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew cask install caffeine # Keep mac awake
-brew cask install flux
-brew cask install iterm2 # Better terminal
-brew cask install skype
-brew cask install spotify
-brew cask install spotify-notifications
-brew cask install spectacle # Window management
-brew cask install textual # Best IRC client
-brew cask install chitchat # Whatsapp desktop client
-brew cask install messenger # FB Messenger desktop client
-brew cask install android-file-transfer
-brew cask install appcleaner
-brew cask install feeds
-brew cask install firefoxnightly
-brew cask install firefox
-brew cask install google-chrome
-brew cask install steam
-brew cask install go2shell
-brew cask install imageoptim
-brew cask install the-unarchiver
-brew cask install dropbox
-brew cask install sublime-text3
-brew cask install transmission
-brew cask install viscosity
-brew cask install vmware-fusion
-# Quicklook plugins
-brew cask install qlcolorcode
-brew cask install qlstephen
-brew cask install qlmarkdown
-brew cask install quicklook-json
-brew cask install qlimagesize
-brew cask install qlvideo
-# Fonts
 brew tap caskroom/fonts
-brew cask install font-inconsolata
-brew cask install font-droid-sans-mono
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+brew cask install $(< brewcask-formulae.txt)
 
 # Install Prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
