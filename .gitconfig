@@ -11,8 +11,15 @@
 	cm = !git add -A && git commit -m
 	amend = !git add -A && git commit --amend --no-edit
 	st = status
+	sw = show
 	last = log -1 HEAD
 	unstage = reset HEAD --
 	hgp = !git format-patch -k -p --patience -U8 -1 HEAD --stdout | git-patch-to-hg-patch > $(git symbolic-ref --short HEAD).patch
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	rb = "!f() { git rebase -i "$1"~; }; f"
+	rbc = !git add -A && git rebase --continue
+	rba = rebase --abort
+	df = diff
+	dc = diff --cached
 [pull]
 	ff = only
