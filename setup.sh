@@ -76,7 +76,7 @@ chsh -s /bin/zsh
 ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 
 # Copy various configuration files
-cp -r .config .gitconfig .zshenv .zshrc .zpreztorc "$HOME"
+cp -r .config .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
 sudo cp gitconfig /usr/local/etc/ && sudo chown "$USER" /usr/local/etc/gitconfig
 
 # Sublime text
