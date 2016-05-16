@@ -20,9 +20,6 @@ ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/loca
 # Install command-line applications
 brew tap mpv-player/mpv
 cat brew-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew install
-# mpv
-brew install --HEAD mpv
-brew linkapps mpv
 
 # Install applications
 brew tap caskroom/cask
@@ -31,7 +28,10 @@ brew tap caskroom/fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 cat brewcask-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew cask install
 
-# Install pip
+# link mpv
+brew linkapps mpv
+
+# pip
 sudo easy_install pip
 
 # Install Prezto

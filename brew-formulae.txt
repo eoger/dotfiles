@@ -1,4 +1,5 @@
 git
+mpv --HEAD --with-bundle
 python
 wget
 zsh
