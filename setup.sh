@@ -33,13 +33,8 @@ brew linkapps mpv
 # pip
 sudo easy_install pip
 
-# Install Prezto
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-./setup-prezto.sh
-chsh -s /bin/zsh
-
 # Copy various configuration files
-cp -r .config .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
+cp -r .config .gitconfig .ssh "$HOME"
 sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/local/etc/gitconfig
 
 # Sublime text 3 setup
@@ -53,6 +48,9 @@ sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/lo
 
 # mozilla gecko dev setup
 ./setup-gecko-dev.sh
+
+# Prezto setup
+./setup-prezto.sh
 
 # Cleanup
 brew cleanup -p && brew cask cleanup
