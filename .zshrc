@@ -12,7 +12,7 @@ fi
 
 autoload bashcompinit
 bashcompinit
-source /Users/eoger/gecko/python/mach/bash-completion.sh
+source "$HOME"/gecko/python/mach/bash-completion.sh
 
 source /usr/local/bin/mozconfigwrapper.sh
 
