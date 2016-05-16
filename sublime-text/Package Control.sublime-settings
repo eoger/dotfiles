@@ -1,9 +1,13 @@
 {
-	"auto_upgrade": true,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"HTML Mustache",
 		"JavaScriptNext - ES6 Syntax",
+		"JSHint Gutter",
 		"JSX",
 		"Package Control",
 		"Sass",

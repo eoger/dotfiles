@@ -8,7 +8,7 @@ brew install mercurial ccache terminal-notifier
 
 # Mnage multiple mozconfigs easily
 sudo pip install mozconfigwrapper
-cp -r .mozconfigs "$HOME"
+ln -sf "$PWD"/.mozconfigs "$HOME"
 
 ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python "$HOME"/bootstrap.py

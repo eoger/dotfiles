@@ -6,5 +6,5 @@ setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
-cp -r .zshenv .zshrc .zpreztorc "$HOME"
+ln -sf "$PWD"/.zshenv "$PWD"/.zshrc "$PWD"/.zpreztorc "$HOME"
 chsh -s /bin/zsh

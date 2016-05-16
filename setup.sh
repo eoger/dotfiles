@@ -25,15 +25,16 @@ brew tap caskroom/fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 cat brewcask-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew cask install
 
-# link mpv
-brew linkapps mpv
-
 # pip
 sudo easy_install pip
 
-# Copy various configuration files
-cp -r .config .gitconfig .ssh "$HOME"
-sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/local/etc/gitconfig
+# Copy and link various configuration files
+cp -r .ssh "$HOME"
+ln -sf "$PWD"/.gitconfig "$HOME"
+sudo ln -sf "$PWD"/.gitconfig-system /usr/local/etc/gitconfig && sudo chown -h "$USER" /usr/local/etc/gitconfig
+
+# mpv setup
+./setup-mpv.sh
 
 # Sublime text 3 setup
 ./setup-sublime.sh

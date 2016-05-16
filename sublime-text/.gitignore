@@ -1,0 +1,3 @@
+*.last-run
+*.cache
+*.*-ca-bundle

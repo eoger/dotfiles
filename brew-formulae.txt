@@ -3,4 +3,3 @@ python
 python3
 wget
 zsh
-mpv --HEAD --with-bundle
