@@ -14,8 +14,6 @@ iterm2 # Better terminal
 messenger # FB Messenger desktop client
 skype
 spectacle # Window management
-spotify
-spotify-notifications
 steam
 sublime-text3
 textual # Best IRC client
