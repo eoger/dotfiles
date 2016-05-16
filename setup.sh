@@ -18,7 +18,6 @@ if ! brew -v &>/dev/null; then
 fi
 
 # Install command-line applications
-brew tap mpv-player/mpv
 cat brew-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew install
 
 # Install applications
