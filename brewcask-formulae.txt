@@ -21,12 +21,14 @@ transmission
 viscosity
 vmware-fusion
 
-qlcolorcode # Quicklook plugins
+# Quicklook plugins
+qlcolorcode
 qlimagesize
 qlmarkdown
 qlstephen
 qlvideo
 quicklook-json
 
-font-droid-sans-mono #Fonts
+# Fonts
+font-droid-sans-mono
 font-inconsolata

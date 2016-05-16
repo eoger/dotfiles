@@ -18,9 +18,9 @@ brew doctor
 ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 
 # Install command-line applications
-brew install $(< brew-formulae.txt)
-# mpv
 brew tap mpv-player/mpv
+cat brew-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew install
+# mpv
 brew install --HEAD mpv
 brew linkapps mpv
 
@@ -29,7 +29,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew cask install $(< brewcask-formulae.txt)
+cat brewcask-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew cask install
 
 # Install pip
 sudo easy_install pip
