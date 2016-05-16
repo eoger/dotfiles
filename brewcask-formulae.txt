@@ -15,7 +15,6 @@ messenger # FB Messenger desktop client
 skype
 spectacle # Window management
 steam
-sublime-text3
 textual # Best IRC client
 the-unarchiver
 transmission

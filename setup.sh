@@ -40,18 +40,8 @@ chsh -s /bin/zsh
 cp -r .config .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
 sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/local/etc/gitconfig
 
-# Sublime text
-
-# Add a command-line subl command to open Sublime Text
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl || true
-# Install Package Control + preferences
-SUBLIME_CONFIG="$HOME"/Library/"Application Support"/"Sublime Text 3"
-SUBLIME_INSTALLED_PACKAGES="$SUBLIME_CONFIG"/"Installed Packages"
-SUBLIME_PREFERENCES="$SUBLIME_CONFIG"/Packages/User
-mkdir -p "$SUBLIME_INSTALLED_PACKAGES"
-mkdir -p "$SUBLIME_PREFERENCES"
-wget https://sublime.wbond.net/Package%20Control.sublime-package -P "$SUBLIME_INSTALLED_PACKAGES"
-cp .sublime/* "$SUBLIME_PREFERENCES"
+# Sublime text 3 setup
+./setup-sublime.sh
 
 # Install nvm + npm + Node
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
