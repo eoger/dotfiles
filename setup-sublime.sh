@@ -9,4 +9,4 @@ SUBLIME_PREFERENCES="$SUBLIME_CONFIG"/Packages/User
 mkdir -p "$SUBLIME_INSTALLED_PACKAGES"
 mkdir -p "$SUBLIME_PREFERENCES"
 wget https://packagecontrol.io/Package%20Control.sublime-package -P "$SUBLIME_INSTALLED_PACKAGES"
-cp .sublime/* "$SUBLIME_PREFERENCES"
+cp sublime-text/* "$SUBLIME_PREFERENCES"

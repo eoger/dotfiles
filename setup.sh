@@ -54,3 +54,5 @@ sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/lo
 
 # Cleanup
 brew cleanup -p && brew cask cleanup
+
+echo "Done! Don't forget to set-up manually the files in the non-automated dir"
