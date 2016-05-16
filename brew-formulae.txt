@@ -1,7 +1,4 @@
-ccache
 git
-mercurial
 python
-terminal-notifier
 wget
 zsh

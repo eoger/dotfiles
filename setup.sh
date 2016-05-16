@@ -37,7 +37,7 @@ chsh -s /bin/zsh
 ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 
 # Copy various configuration files
-cp -r .config .mozconfigs .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
+cp -r .config .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
 sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/local/etc/gitconfig
 
 # Sublime text
@@ -59,37 +59,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 nvm install 5
 npm install -g npm
-nvm install 4
-npm install -g npm
-nvm install 0.10
-npm install -g npm
-nvm unalias default # Super slow zsh startup otherwise :(
+nvm unalias default
 
-# FxA Dev Dependencies
-brew install gmp redis graphicsmagick
-sudo easy_install pip && sudo pip install virtualenv
+# Install pip
+sudo easy_install pip
 
-# Allows to manage multiple mozconfigs
-sudo pip install mozconfigwrapper
+# fxa dev setup
+./setup-fxa-dev.sh
 
-# mozilla-central setup
-ccache --max-size 8G
-curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python bootstrap.py
-
-# Install git cinnabar and moz-git-tools
-git clone https://github.com/glandium/git-cinnabar.git "$HOME"/git-cinnabar
-git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
-
-# See https://github.com/glandium/git-cinnabar/wiki/Mozilla:-A-git-workflow-for-Gecko-development
-cp -r gecko "$HOME"
-cd "$HOME"/gecko
-git init
-mv .gitconfig .git/config
-git remote update
-git checkout central/default
-./mach mercurial-setup # We need this at least for the MozReview Git Tools
-git mozreview configure
-cd -
+# mozilla gecko dev setup
+./setup-gecko-dev.sh
 
 # Cleanup
 brew cleanup -p && brew cask cleanup
