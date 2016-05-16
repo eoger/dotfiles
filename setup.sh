@@ -8,11 +8,14 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Xcode Command Line Tools
-xcode-select --install
+if ! xcode-select -p &>/dev/null; then
+   xcode-select --install
+fi
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor
+if ! brew -v &>/dev/null; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Install command-line applications
 brew tap mpv-player/mpv
