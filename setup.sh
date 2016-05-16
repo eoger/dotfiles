@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-set -e # Exit on error
-set -o xtrace # Print executed commands
+set -e -o xtrace # Exit on error and print executed commands
 
 # Sudo keepalive
 sudo -v
