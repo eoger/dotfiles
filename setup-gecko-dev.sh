@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e -o xtrace # Exit on error and print executed commands
 
+open macappstore://itunes.apple.com/app/id497799835?mt=12 # Install Xcode
+echo "Press any key once Xcode is installed"; read
+
 brew install mercurial ccache terminal-notifier
 
 # Mnage multiple mozconfigs easily
