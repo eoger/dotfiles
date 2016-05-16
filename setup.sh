@@ -31,6 +31,9 @@ brew tap caskroom/fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install $(< brewcask-formulae.txt)
 
+# Install pip
+sudo easy_install pip
+
 # Install Prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ./setup-prezto.sh
@@ -43,16 +46,8 @@ sudo cp .gitconfig-system /usr/local/etc/gitconfig && sudo chown "$USER" /usr/lo
 # Sublime text 3 setup
 ./setup-sublime.sh
 
-# Install nvm + npm + Node
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm install 5
-npm install -g npm
-nvm unalias default
-
-# Install pip
-sudo easy_install pip
+# node 5 setup
+./setup-node.sh
 
 # fxa dev setup
 ./setup-fxa-dev.sh
