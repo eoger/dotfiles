@@ -14,6 +14,9 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 
+# Brew command line completion
+ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
+
 # Install command-line applications
 brew install $(< brew-formulae.txt)
 # mpv
@@ -32,9 +35,6 @@ brew cask install $(< brewcask-formulae.txt)
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ./setup-prezto.sh
 chsh -s /bin/zsh
-
-# Brew command line completion
-ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 
 # Copy various configuration files
 cp -r .config .gitconfig .ssh .zshenv .zshrc .zpreztorc "$HOME"
