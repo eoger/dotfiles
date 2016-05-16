@@ -14,9 +14,6 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 
-# Brew command line completion
-ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
-
 # Install command-line applications
 brew tap mpv-player/mpv
 cat brew-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew install
