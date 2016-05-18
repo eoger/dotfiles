@@ -16,14 +16,14 @@ if ! brew -v &>/dev/null; then
 fi
 
 # Install command-line applications
-cat brew-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew install
+cat brew-formulae.txt | cut -d'#' -f1 | awk 'NF' | xargs -L 1 brew install
 
 # Install applications
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-cat brewcask-formulae.txt | egrep -v "^\s*(#|$)" | xargs -L 1 brew cask install
+cat brewcask-formulae.txt | cut -d'#' -f1 | awk 'NF' | xargs -L 1 brew cask install
 
 # pip
 sudo easy_install pip
