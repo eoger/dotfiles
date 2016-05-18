@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e -o xtrace # Exit on error and print executed commands
+set -e -v # Exit on error and print executed commands
 
 # Dependencies
 brew install gmp redis graphicsmagick

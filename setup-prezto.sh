@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-set -e -o xtrace # Exit on error and print executed commands
+set -e -v # Exit on error and print executed commands
 
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
