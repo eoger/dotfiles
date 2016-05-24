@@ -19,6 +19,7 @@
 	rb = "!f() { git rebase -i "$1"~; }; f"
 	rbc = !git add -A && git rebase --continue
 	rba = rebase --abort
+	rbs = rebase --skip
 	df = diff
 	dc = diff --cached
 [pull]
