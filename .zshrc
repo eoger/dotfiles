@@ -17,3 +17,6 @@ source "$HOME"/gecko/python/mach/bash-completion.sh
 source /usr/local/bin/mozconfigwrapper.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
+# Disable autocorrect
+unsetopt correct
