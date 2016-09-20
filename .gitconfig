@@ -24,3 +24,5 @@
 	dc = diff --cached
 [pull]
 	ff = only
+[credential]
+	helper = osxkeychain
