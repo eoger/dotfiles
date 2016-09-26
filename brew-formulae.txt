@@ -1,5 +1,0 @@
-git
-python
-python3
-wget
-zsh

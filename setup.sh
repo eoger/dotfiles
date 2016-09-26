@@ -15,15 +15,9 @@ if ! brew -v &>/dev/null; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install command-line applications
-cat brew-formulae.txt | cut -d'#' -f1 | awk 'NF' | xargs -L 1 brew install
-
-# Install applications
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap caskroom/fonts
+# Install brew/brew-cask apps
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-cat brewcask-formulae.txt | cut -d'#' -f1 | awk 'NF' | xargs -L 1 brew cask install
+brew bundle
 
 # pip
 sudo easy_install pip
