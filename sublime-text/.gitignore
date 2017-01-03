@@ -1,3 +1,4 @@
 *.last-run
 *.cache
 *.*-ca-bundle
+oscrypto-ca-bundle.crt
