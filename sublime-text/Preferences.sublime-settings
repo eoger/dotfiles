@@ -32,6 +32,7 @@
 		".git",
 		".hg",
 		"CVS",
+		".cargo",
 		"node_modules",
 		"bower_components",
 		"gecko/js/src/*test*",
