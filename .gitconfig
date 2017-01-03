@@ -26,3 +26,5 @@
 	ff = only
 [credential]
 	helper = osxkeychain
+[cinnabar]
+	helper = /Users/eoger/git-cinnabar/git-cinnabar-helper
