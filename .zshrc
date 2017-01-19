@@ -30,6 +30,9 @@ alias r="./mach run"
 alias br="./mach build && ./mach run"
 alias bfr="./mach build faster && ./mach run"
 alias bp="./mach build && ./mach package"
+# These 2 commands can work with absolute paths!
+alias xpc="python -c 'import os, sys; os.system(\"./mach xpcshell-test \" + os.path.relpath(*sys.argv[1:]))'"
+alias mochi="python -c 'import os, sys; os.system(\"./mach mochitest \" + os.path.relpath(*sys.argv[1:]))'"
 
 export NVM_DIR="/Users/eoger/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
