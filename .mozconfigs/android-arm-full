@@ -2,11 +2,11 @@ mk_add_options AUTOCLOBBER=1
 
 ac_add_options --enable-application=mobile/android
 
-# x86 version
-ac_add_options --target=i386-linux-android
+ac_add_options --target=arm-linux-androideabi
 
 # With the following Android SDK (has to be an absolute path):
 ac_add_options --with-android-sdk="/Users/eoger/.mozbuild/android-sdk-macosx"
 
-# Enable artifact building:
-ac_add_options --enable-artifact-builds
+ac_add_options --with-android-ndk="/Users/eoger/.mozbuild/android-ndk-r11b"
+
+ac_add_options --with-ccache=/usr/local/bin/ccache
