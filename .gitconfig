@@ -24,6 +24,8 @@
 	dc = diff --cached
 [pull]
 	ff = only
+[status]
+  showUntrackedFiles = all
 [credential]
 	helper = osxkeychain
 [cinnabar]
