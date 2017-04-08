@@ -7,14 +7,9 @@
 	precomposeunicode = true
 [fetch]
 	prune = true
-[push]
-	default = upstream
-[remote "central"]
-	url = hg::https://hg.mozilla.org/mozilla-central
-	fetch = +refs/heads/branches/default/tip:refs/remotes/central/default
-[remote "inbound"]
-	url = hg::https://hg.mozilla.org/integration/mozilla-inbound
-	fetch = +refs/heads/branches/default/tip:refs/remotes/inbound/default
+[remote "mozilla"]
+	url = hg::https://hg.mozilla.org/mozilla-unified
+	fetch = +refs/heads/bookmarks/*:refs/remotes/mozilla/*
 	pushurl = hg::ssh://hg.mozilla.org/integration/mozilla-inbound
 [remote "try"]
 	url = hg::https://hg.mozilla.org/try

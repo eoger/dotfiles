@@ -23,6 +23,6 @@ cd "$HOME"/gecko
 git init
 mv .gitconfig .git/config
 git remote update
-git checkout central/default
+git checkout mozilla/central
 ./mach mercurial-setup # We need this at least for the MozReview Git Tools
 git mozreview configure
