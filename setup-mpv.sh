@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e -v # Exit on error and print executed commands
 
-brew install mpv --HEAD --with-bundle
-brew linkapps mpv
+brew cask install mpv
 CONFIG="$HOME"/.config
 mkdir -p "$CONFIG"
 ln -sf "$PWD"/mpv "$CONFIG"/mpv
