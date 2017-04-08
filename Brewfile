@@ -7,28 +7,25 @@ brew zsh
 tap caskroom/versions
 tap caskroom/fonts
 
+cask alfred
 cask android-file-transfer
-cask appcleaner
-cask caffeine # Keep mac awake
-cask chitchat # Whatsapp desktop client
+cask cryptomator
 cask dropbox
 cask feeds
 cask firefox
 cask firefoxnightly
-cask flux
 cask go2shell
 cask google-chrome
 cask imageoptim
 cask iterm2 # Better terminal
-cask messenger # FB Messenger desktop client
+cask keepingyouawake # Keep mac awake
+cask messenger-for-desktop # FB Messenger desktop client
 cask skype
 cask spectacle # Window management
-cask steam
 cask textual # Best IRC client
 cask the-unarchiver
 cask transmission
 cask viscosity
-cask vmware-fusion
 
 # Quicklook plugins
 cask qlcolorcode
