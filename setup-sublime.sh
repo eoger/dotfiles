@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e -v # Exit on error and print executed commands
 
-brew cask install sublime-text3
+brew cask install sublime-text
 
 # Install Package Control + preferences
 SUBLIME_CONFIG="$HOME"/Library/"Application Support"/"Sublime Text 3"
