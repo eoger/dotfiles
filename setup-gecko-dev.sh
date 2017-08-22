@@ -4,13 +4,12 @@ set -e -v # Exit on error and print executed commands
 open macappstore://itunes.apple.com/app/id497799835?mt=12 # Install Xcode
 echo "Press any key once Xcode is installed"; read
 
-brew install mercurial ccache terminal-notifier
+brew install mercurial sccache terminal-notifier
 
 # Mnage multiple mozconfigs easily
 sudo pip install mozconfigwrapper
 ln -sf "$PWD"/.mozconfigs "$HOME"
 
-ccache --max-size 8G
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python "$HOME"/bootstrap.py
 
 # Install git cinnabar and moz-git-tools

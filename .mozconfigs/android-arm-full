@@ -9,4 +9,4 @@ ac_add_options --with-android-sdk="/Users/eoger/.mozbuild/android-sdk-macosx"
 
 ac_add_options --with-android-ndk="/Users/eoger/.mozbuild/android-ndk-r11b"
 
-ac_add_options --with-ccache=/usr/local/bin/ccache
+ac_add_options --with-ccache=sccache
