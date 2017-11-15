@@ -1,3 +1,4 @@
 mk_add_options AUTOCLOBBER=1
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-macos-full
 
 ac_add_options --with-ccache=sccache
