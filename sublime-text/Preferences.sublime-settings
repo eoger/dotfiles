@@ -69,7 +69,8 @@
 		"gecko/other-licenses",
 		"gecko/python",
 		"gecko/security/sandbox/chromium",
-		"gecko/testing"
+		"gecko/testing",
+		"web-ext-artifacts"
 	],
 	"font_face": "Inconsolata",
 	"font_size": 14,
