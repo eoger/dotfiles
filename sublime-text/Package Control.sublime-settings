@@ -5,9 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"HTML Mustache",
+		"Copy Relative Path",
 		"JavaScriptNext - ES6 Syntax",
-		"JSHint Gutter",
 		"JSX",
 		"Package Control",
 		"Sass",
