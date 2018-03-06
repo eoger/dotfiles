@@ -36,3 +36,11 @@ alias mochi="python -c 'import os, sys; os.system(\"./mach mochitest \" + os.pat
 
 export NVM_DIR="/Users/eoger/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Look for .nvmrc in directories.  If found, change to that version of node.
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
