@@ -12,8 +12,14 @@ ln -sf "$PWD"/.mozconfigs "$HOME"
 
 curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py > "$HOME"/bootstrap.py && python "$HOME"/bootstrap.py
 
-# Install git cinnabar and moz-git-tools
+# Install git cinnabar
 git clone https://github.com/glandium/git-cinnabar.git "$HOME"/git-cinnabar
+cd "$HOME"/git-cinnabar
+pip install requests
+git cinnabar download
+cd "$HOME"
+
+# Install moz-git-tools
 git clone https://github.com/mozilla/moz-git-tools.git "$HOME"/moz-git-tools
 
 # See https://github.com/glandium/git-cinnabar/wiki/Mozilla:-A-git-workflow-for-Gecko-development
