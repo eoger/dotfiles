@@ -34,7 +34,7 @@ sudo ln -sf "$PWD"/.gitconfig-system /usr/local/etc/gitconfig && sudo chown -h "
 # Sublime text 3 setup
 ./setup-sublime.sh
 
-# node 5 setup
+# node latest
 ./setup-node.sh
 
 # mozilla gecko dev setup
