@@ -21,6 +21,7 @@ cask iterm2 # Better terminal
 cask keepingyouawake # Keep mac awake
 cask messenger-for-desktop # FB Messenger desktop client
 cask skype
+cask slack
 cask spectacle # Window management
 cask textual # Best IRC client
 cask the-unarchiver
