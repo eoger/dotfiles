@@ -37,9 +37,6 @@ sudo ln -sf "$PWD"/.gitconfig-system /usr/local/etc/gitconfig && sudo chown -h "
 # node 5 setup
 ./setup-node.sh
 
-# fxa dev setup
-./setup-fxa-dev.sh
-
 # mozilla gecko dev setup
 ./setup-gecko-dev.sh
 
