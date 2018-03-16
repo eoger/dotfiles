@@ -16,7 +16,6 @@ if ! brew -v &>/dev/null; then
 fi
 
 # Install brew/brew-cask apps
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew bundle
 
 # pip
