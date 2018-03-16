@@ -1,6 +1,7 @@
 # This is Git's per-user configuration file.
 [core]
 	editor = subl -n -w
+	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [user]
@@ -30,4 +31,4 @@
 [credential]
 	helper = osxkeychain
 [cinnabar]
-	helper = /Users/eoger/git-cinnabar/git-cinnabar-helper
+	helper = ~/git-cinnabar/git-cinnabar-helper

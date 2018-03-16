@@ -25,6 +25,7 @@ sudo easy_install pip
 # Copy and link various configuration files
 cp -r .ssh "$HOME"
 ln -sf "$PWD"/.gitconfig "$HOME"
+ln -sf "$PWD"/.gitignore_global "$HOME"
 sudo ln -sf "$PWD"/.gitconfig-system /usr/local/etc/gitconfig && sudo chown -h "$USER" /usr/local/etc/gitconfig
 
 # mpv setup
