@@ -16,8 +16,6 @@ source "$HOME"/gecko/python/mach/bash-completion.sh
 
 source /usr/local/bin/mozconfigwrapper.sh
 
-source /Users/eoger/.cargo/env
-
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
 # Disable autocorrect
@@ -29,9 +27,13 @@ alias r="./mach run"
 alias br="./mach build && ./mach run"
 alias bfr="./mach build faster && ./mach run"
 alias bp="./mach build && ./mach package"
+alias bw="./mach build && ./mach watch"
+alias w="./mach watch"
 # These 2 commands can work with absolute paths!
 alias xpc="python -c 'import os, sys; os.system(\"./mach xpcshell-test \" + os.path.relpath(*sys.argv[1:]))'"
 alias mochi="python -c 'import os, sys; os.system(\"./mach mochitest \" + os.path.relpath(*sys.argv[1:]))'"
+# FxA
+alias pm2="~/fxa-local-dev/pm2"
 
 export NVM_DIR="/Users/eoger/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -43,3 +45,11 @@ load-nvmrc() {
   fi
 }
 add-zsh-hook chpwd load-nvmrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Doesn't work when in .zshenv
+export EDITOR="subl -n -w"
+
+# added by travis gem
+[ -f /Users/eoger/.travis/travis.sh ] && source /Users/eoger/.travis/travis.sh
