@@ -23,7 +23,9 @@
 		"*.db",
 		"*.sublime-workspace",
 		"bundle.js",
-		"coverage.html"
+		"coverage.html",
+		"npm-shrinkwrap.json",
+		"package-log.json"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -36,9 +38,9 @@
 		".nyc_output",
 		".svn",
 		".tmp",
+		"build",
 		"CVS",
 		"node_modules",
-		"vendor",
 		"bower_components",
 		"gecko/js/src/*test*",
 		"gecko/addon-sdk",
@@ -70,7 +72,8 @@
 		"gecko/python",
 		"gecko/security/sandbox/chromium",
 		"gecko/testing",
-		"web-ext-artifacts"
+		"web-ext-artifacts",
+		"target"
 	],
 	"font_face": "Inconsolata",
 	"font_size": 14,
