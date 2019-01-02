@@ -5,3 +5,4 @@ ac_add_options --with-ccache=sccache
 
 ac_add_options --enable-debug
 ac_add_options --disable-optimize
+ac_add_options --with-macos-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
