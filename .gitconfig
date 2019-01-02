@@ -28,5 +28,3 @@
 	ff = only
 [credential]
 	helper = osxkeychain
-[cinnabar]
-	helper = ~/git-cinnabar/git-cinnabar-helper
