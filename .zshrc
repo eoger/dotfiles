@@ -50,6 +50,7 @@ add-zsh-hook chpwd load-nvmrc
 
 # Doesn't work when in .zshenv
 export EDITOR="subl -n -w"
+export GPG_TTY=$(tty)
 
 # added by travis gem
 [ -f /Users/eoger/.travis/travis.sh ] && source /Users/eoger/.travis/travis.sh
