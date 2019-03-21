@@ -15,8 +15,10 @@ export PATH="$PATH:$HOME/arcanist/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK_ROOT
-export ANDROID_NDK_HOME="$HOME/android-ndk-r15c"
+export ANDROID_NDK_ROOT="$HOME/android-ndk-r15c"
 export ANDROID_NDK_TOOLCHAIN_DIR="$HOME/android-ndk-toolchain"
+
 export BUILDWITH_COMMAND="export MOZCONFIG=#1 && launchctl setenv MOZCONFIG #1"

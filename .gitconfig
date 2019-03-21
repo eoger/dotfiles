@@ -29,3 +29,5 @@
 	ff = only
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true

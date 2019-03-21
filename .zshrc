@@ -34,6 +34,11 @@ alias xpc="python -c 'import os, sys; os.system(\"./mach xpcshell-test \" + os.p
 alias mochi="python -c 'import os, sys; os.system(\"./mach mochitest \" + os.path.relpath(*sys.argv[1:]))'"
 # FxA
 alias pm2="~/fxa-local-dev/pm2"
+# Rust
+alias fmt="cargo fmt"
+alias check="cargo check --tests --examples && cargo check --all-features --tests --examples"
+# Git todos
+alias todos='git sw | grep -E "^\+" | grep -C8 -i todo'
 
 export NVM_DIR="/Users/eoger/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -51,6 +56,3 @@ add-zsh-hook chpwd load-nvmrc
 # Doesn't work when in .zshenv
 export EDITOR="subl -n -w"
 export GPG_TTY=$(tty)
-
-# added by travis gem
-[ -f /Users/eoger/.travis/travis.sh ] && source /Users/eoger/.travis/travis.sh
