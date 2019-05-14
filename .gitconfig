@@ -19,6 +19,8 @@
 	hgp = !git format-patch -k -p -U8 -1 HEAD --stdout | git-patch-to-hg-patch > $(git symbolic-ref --short HEAD).patch
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 	rb = "!f() { git rebase -i "$1"~; }; f"
+	fixup = commit --fixup
+	autosquash = "!f() { git rebase -i --autosquash "$1"~; }; f"
 	rbc = !git add -A && git rebase --continue
 	rba = rebase --abort
 	rbs = rebase --skip
