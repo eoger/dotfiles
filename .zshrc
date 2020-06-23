@@ -32,13 +32,13 @@ alias w="./mach watch"
 # These 2 commands can work with absolute paths!
 alias xpc="python -c 'import os, sys; os.system(\"./mach xpcshell-test \" + os.path.relpath(*sys.argv[1:]))'"
 alias mochi="python -c 'import os, sys; os.system(\"./mach mochitest \" + os.path.relpath(*sys.argv[1:]))'"
-# FxA
-alias pm2="~/fxa-local-dev/pm2"
 # Rust
-alias fmt="cargo fmt"
-alias check="cargo check --tests --examples && cargo check --all-features --tests --examples"
-# Git todos
-alias todos='git sw | grep -E "^\+" | grep -C8 -i todo'
+alias check="cargo check --all-features --tests --examples"
+alias clippy="cargo clippy --all --all-targets --all-features -- -D warnings"
+
+# Default to python3
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
 
 export NVM_DIR="/Users/eoger/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -56,3 +56,5 @@ add-zsh-hook chpwd load-nvmrc
 # Doesn't work when in .zshenv
 export EDITOR="subl -n -w"
 export GPG_TTY=$(tty)
+
+. /usr/local/etc/profile.d/z.sh
