@@ -1,5 +1,4 @@
 brew git
-brew python
 brew python3
 brew wget
 brew zsh
@@ -8,25 +7,21 @@ tap caskroom/versions
 tap caskroom/fonts
 
 cask alfred
-cask android-file-transfer
-cask cryptomator
-cask dropbox
-cask feeds
+cask authy
+cask docker
 cask firefox
-cask firefoxnightly
 cask go2shell
 cask google-chrome
 cask imageoptim
-cask iterm2 # Better terminal
-cask keepingyouawake # Keep mac awake
-cask messenger-for-desktop # FB Messenger desktop client
-cask skype
+cask iterm2
+cask keepingyouawake
 cask slack
-cask spectacle # Window management
-cask textual # Best IRC client
+cask spectacle
+cask spotify
+cask sublime-text
 cask the-unarchiver
-cask transmission
-cask viscosity
+cask visual-studio-code
+cask zoom
 
 # Quicklook plugins
 cask qlcolorcode

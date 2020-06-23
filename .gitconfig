@@ -7,7 +7,6 @@
 [user]
 	name = Edouard Oger
 	email = eoger@fastmail.com
-	signingkey = A2F740742307674A
 [alias]
 	co = checkout
 	cm = !git add -A && git commit -m
@@ -35,5 +34,5 @@
 	ff = only
 [credential]
 	helper = osxkeychain
-[commit]
-	gpgsign = true
+[init]
+	defaultBranch = main

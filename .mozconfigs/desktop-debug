@@ -1,9 +1,0 @@
-mk_add_options AUTOCLOBBER=1
-mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-macos-full-debug
-
-ac_add_options --with-ccache=sccache
-ac_add_options --enable-logrefcnt
-ac_add_options --disable-crashreporter
-ac_add_options --enable-debug
-#ac_add_options --disable-optimize
-ac_add_options --with-macos-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk

@@ -12,32 +12,17 @@ fi
 
 # Install Homebrew
 if ! brew -v &>/dev/null; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install brew/brew-cask apps
 brew bundle
-
-# pip
-sudo easy_install pip
 
 # Copy and link various configuration files
 ln -sf "$PWD"/.ssh/config "$HOME"/.ssh
 ln -sf "$PWD"/.gitconfig "$HOME"
 ln -sf "$PWD"/.gitignore_global "$HOME"
 sudo ln -sf "$PWD"/.gitconfig-system /usr/local/etc/gitconfig && sudo chown -h "$USER" /usr/local/etc/gitconfig
-
-# mpv setup
-./setup-mpv.sh
-
-# Sublime text 3 setup
-./setup-sublime.sh
-
-# node latest
-./setup-node.sh
-
-# mozilla gecko dev setup
-./setup-gecko-dev.sh
 
 # Prezto setup
 ./setup-prezto.sh
