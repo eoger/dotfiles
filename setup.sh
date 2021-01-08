@@ -28,6 +28,6 @@ sudo ln -sf "$PWD"/.gitconfig-system /usr/local/etc/gitconfig && sudo chown -h "
 ./setup-prezto.sh
 
 # Cleanup
-brew cleanup -p && brew cask cleanup
+brew cleanup
 
 echo "Done! Don't forget to set-up manually the files in the non-automated dir"
