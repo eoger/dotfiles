@@ -2,6 +2,7 @@ brew "git"
 brew "python3"
 brew "wget"
 brew "zsh"
+brew "z"
 
 cask "alfred"
 cask "authy"
