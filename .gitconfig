@@ -1,7 +1,6 @@
 # This is Git's per-user configuration file.
 [core]
 	editor = code --wait
-	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [user]
