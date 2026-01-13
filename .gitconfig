@@ -1,37 +1,52 @@
-# This is Git's per-user configuration file.
 [core]
-	editor = code --wait
+editor = code --wait
+
 [push]
-	default = simple
-[user]
-	name = Edouard Oger
-	email = eoger@fastmail.com
-[alias]
-	co = checkout
-	cm = !git add -A && git commit -m
-	amend = !git add -A && git commit --amend --no-edit
-	fu = !git amend && git push --force
-	st = status
-	sw = show
-	last = log -1 HEAD
-	unstage = reset HEAD --
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-	rb = "!f() { git rebase -i "$1"~; }; f"
-	fixup = commit --fixup
-	autosquash = "!f() { git rebase -i --autosquash "$1"~; }; f"
-	rbc = !git add -A && git rebase --continue
-	rba = rebase --abort
-	cp = cherry-pick
-	cpa = cherry-pick --abort
-	cpc = !git add -A && git cherry-pick --continue
-	df = diff
-	dc = diff --cached
-	pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-	pusho = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
-	pushe = "!git push -u eoger $(git rev-parse --abbrev-ref HEAD)"
+default = simple
+
 [pull]
-	ff = only
+ff = only
+
 [credential]
-	helper = osxkeychain
+helper = osxkeychain
+
 [init]
-	defaultBranch = main
+defaultBranch = main
+
+[user]
+name = "Edouard Oger"
+email = "eoger@fastmail.com"
+
+[fetch]
+prune = true
+
+[merge]
+conflictstyle = diff3
+
+[help]
+# Automatically correct and execute mistyped commands such as `git stauts`
+autocorrect = 50
+
+[alias]
+co = checkout
+st = status
+sw = show
+sws = sw --stat
+swn = show -- . ':!*.pb.go'
+swns = show --stat -- . ':!*.pb.go'
+unstage = reset HEAD --
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+df = diff
+dc = diff --cached
+cm = !git add -A && git commit -m
+amend = !git add -A && git commit --amend --no-edit
+rbm = !git fetch origin master-passing-tests && git rebase origin/master-passing-tests
+rb = "!f() { git rebase -i "$1"~; }; f"
+rbc = !git add -A && git rebase --continue
+rba = rebase --abort
+cp = cherry-pick
+cpa = cherry-pick --abort
+cpc = !git add -A && git cherry-pick --continue
+pusho = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+pushf = push --force
+recent = "branch --sort=-committerdate"
